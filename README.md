@@ -2,7 +2,7 @@
 Gesetze-im-Internet XML Extraction Algorithm
 
 ## Motivation
-Gesetze-im-Internet(GiL) ist ein toller Service, da alle Gesetzestexte auch im XML-Format verfügbar sind. Im Zusammenhang mit einer möglichen Weiterverarbeitung in LLM wollte ich die Möglichkeit haben, einzelne Paragraphen abfragen.
+Gesetze-im-Internet(GiL) ist ein toller Service, da alle Gesetzestexte auch im XML-Format verfügbar sind. Im Zusammenhang mit einer möglichen Weiterverarbeitung in LLM wollte ich die Möglichkeit haben, einzelne Paragraphen abzufragen.
 
 ## Realisierung
 XML-Datei wird von GiI heruntergeladen, in Python in JSON-Format umgewandelt, in RedisJSON gespeichert und mit dem Algorithmus, der hier präsentiert wird, verarbeitet. 
