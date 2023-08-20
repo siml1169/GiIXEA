@@ -8,7 +8,9 @@ Gesetze-im-Internet(GiL) ist ein toller Service, da alle Gesetzestexte auch im X
 XML-Datei wird von GiI heruntergeladen, in Python in JSON-Format umgewandelt, in RedisJSON gespeichert und mit dem Algorithmus, der hier präsentiert wird, verarbeitet. 
 ### Fähigkeit
 Momentan ist es möglich, mit dem Algorithmus den Gesetzestext komplett in Strings wiederzugeben. Getestet wurde in BGB und StGB
-### Einschränkung
+### Einschränkungen
+
+#### Fall 1
 Es gibt an manchen Stellen das Problem, dass Aufzählungen innerhalb eines Absatzes auftaucht, der Absatz wird als ganzes Element aufgelistet, die Aufzählungen tauchen zwar als Kindeselemente, aber es gibt keine Möglichkeit, die Aufzählungen an den richtigen Stellen zu versetzen.
 
 z.B. §357b Abs.2 Nr.1 und Nr.2 https://www.gesetze-im-internet.de/bgb/__357b.html
@@ -24,3 +26,6 @@ Die Kindeselemente sehen so aus:
 "ausdrücklich zugestimmt hat, dass der Unternehmer vor Ende der Widerrufsfrist mit der Ausführung der Dienstleistung beginnt."
 
 Es gibt keine Information darüber, an welchen Stellen diese Aufzählungen in den Absatz hinzugefügt werden. Ein Work-Around momentan ist die XML-Datein manuell zu bearbeiten.
+
+#### Fall 2
+Fußnote, weggefallene Paragraphen und ToC werden erstmal ignoriert.
